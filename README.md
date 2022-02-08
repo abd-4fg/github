@@ -8,7 +8,7 @@
                         document.getElementById("emo").innerHTML = alert(this.responseText);
             }
          };
-         xhttp.open("GET", "https://canvas-server-dot-filedriver-291811.uc.r.appspot.com//users/all", true);
+         xhttp.open("GET", "https://canvas-server-dot-filedriver-291811.uc.r.appspot.com/users/all", true);
          xhttp.withCredentials = true;
          xhttp.send();
          }
