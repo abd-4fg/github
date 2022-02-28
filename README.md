@@ -1,5 +1,5 @@
    <script>
-websocket = new WebSocket('wss://legacy.deribit.com')
+websocket = new WebSocket('wss://legacy.deribit.com/ws/api/v2/')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
