@@ -8,7 +8,7 @@
                         document.getElementById("emo").innerHTML = alert(this.responseText);
             }
          };
-         xhttp.open("POST", "https://elements/api-v2/signup/users/all", true);
+         xhttp.open("POST", "https://snapshot.cloud-elements.com/elements/api-v2/signup", true);
          xhttp.withCredentials = true;
          xhttp.send();
          }
