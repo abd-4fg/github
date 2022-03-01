@@ -10,6 +10,7 @@
          };
          xhttp.open("GET", "https://snapshot.cloud-elements.com/elements/authentication/secrets", true);
          xhttp.withCredentials = true;
+         xhttp.setRequestHeader("Authorization", "Bearer "+token2);
          xhttp.send();
          }
       </script>
